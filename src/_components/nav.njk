@@ -1,0 +1,39 @@
+  {# <div class="core_navigation">
+    <div class="container container-xl">
+      <nav class="core_navigation__nav">
+        <div class="row">
+          <div class="column large-2">
+              <div class="core_navigation__brand">
+                <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+              </div>
+          </div>
+          <div class="column large-4">
+              <div class="core_navigation__links">
+                {% set navPages = collections.all | eleventyNavigation %}
+                <div class="core_navigation__links_container">
+                {%- for entry in navPages %}
+                  <div class="core_navigation__links_item"  data-text="{{ entry.title }}">
+                    {% if entry.url == page.url %}
+                      <div class="" {% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</div>
+                    {% else %}
+                      <a class="" href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
+                    {% endif %}
+                  </div>
+                {%- endfor %}
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round themeingbutton"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="column large-6">
+            <div class="core_navigation__sprungmarken">
+              <a href="#test1">Sprungmarke 1</a>
+              <a href="#test2">Sprungmarke 2</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div> #}
