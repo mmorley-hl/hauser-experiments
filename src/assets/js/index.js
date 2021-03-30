@@ -14,3 +14,4 @@ import './_headroom.js';
 // import './_scrollTrigger.js';
 import './_dots.js';
 import './_a-test.js';
+import './_a-test-solo.js';
