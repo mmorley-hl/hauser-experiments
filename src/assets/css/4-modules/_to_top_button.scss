@@ -4,10 +4,16 @@
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	background-color: color('primary');
+	@include customize(theme) {
+        background-color: getValue(backgroundDark);
+      }
 	width: 80px;
 	height: 80px;
 	border-radius: 100%;
+	border: 1px solid;
+	@include customize(theme) {
+        border-color: getValue(backgroundLight);
+      }
 	display: flex;
 	justify-content: center;
 	box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .1);
@@ -24,6 +30,12 @@
 		all: unset;
 		background-color: transparent;
 		border: none;
+		svg {
+			@include customize(theme) {
+				fill: getValue(backgroundLight);
+			  }
+			
+		}
 
 		&:hover {
 			transform: scale(1.2);

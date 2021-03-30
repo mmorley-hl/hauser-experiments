@@ -1,7 +1,7 @@
 $themes: (
   light: (
     backgroundLight:  $primary,
-    backgroundDark: #f7f7f8,
+    backgroundDark: $secondary,
     textColor: #fff,
     textDark: #000,
     textLight: #919394,
@@ -11,7 +11,7 @@ $themes: (
   ),
   dark: (
     backgroundLight: $secondary,
-    backgroundDark: #000,
+    backgroundDark: $primary,
     textColor: #fff,
     textDark: #fff,
     textLight: #b9baba,

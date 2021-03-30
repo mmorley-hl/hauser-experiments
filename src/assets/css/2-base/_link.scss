@@ -1,7 +1,9 @@
 a {
 	position: relative;
 	text-decoration: none;
-	color: color('primary');
+	@include customize(theme) {
+        color: getValue(backgroundLight);
+      }
 
 	&:hover {
 		text-decoration: underline;

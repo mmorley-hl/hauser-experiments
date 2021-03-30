@@ -1,4 +1,4 @@
-  {# <div class="core_navigation">
+  <div class="core_navigation">
     <div class="container container-xl">
       <nav class="core_navigation__nav">
         <div class="row">
@@ -7,7 +7,7 @@
                 <a href="{{ '/' | url }}">{{ metadata.title }}</a>
               </div>
           </div>
-          <div class="column large-4">
+          <div class="column large-10">
               <div class="core_navigation__links">
                 {% set navPages = collections.all | eleventyNavigation %}
                 <div class="core_navigation__links_container">
@@ -20,20 +20,17 @@
                     {% endif %}
                   </div>
                 {%- endfor %}
-                <label class="switch">
-                  <input type="checkbox">
-                  <span class="slider round themeingbutton"></span>
-                </label>
+                <div class="core_navigation__links_item">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round themeingbutton"></span>
+                  </label>
+                </div>
+
               </div>
-            </div>
-          </div>
-          <div class="column large-6">
-            <div class="core_navigation__sprungmarken">
-              <a href="#test1">Sprungmarke 1</a>
-              <a href="#test2">Sprungmarke 2</a>
             </div>
           </div>
         </div>
       </nav>
     </div>
-  </div> #}
+  </div>

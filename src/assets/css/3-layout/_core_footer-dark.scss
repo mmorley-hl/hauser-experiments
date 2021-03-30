@@ -1,7 +1,16 @@
+footer {
+	@include customize(theme) {
+        color: getValue(backgroundLight);
+      }
+}
+
+
 .footer-dark {
 	margin-top: 8rem;
 	a {
-		color: white;
+		@include customize(theme) {
+			color: getValue(backgroundDark);
+		  }
 		transition: transform 1.3s;
 
 		&:hover {
@@ -9,7 +18,9 @@
 		}
 	}
 
-	background-color: black;
+	@include customize(theme) {
+        fill: getValue(backgroundDark);
+      }
 
 	&__hero {
 		position: relative;

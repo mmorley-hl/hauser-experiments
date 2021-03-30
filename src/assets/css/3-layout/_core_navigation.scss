@@ -7,13 +7,15 @@
 }
 
 .core_navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	
 	@include customize(theme) {
 		background-color: getValue(backgroundLight);
 		color: getValue(textDark);
 	}
-	background-color: red;
-	opacity: 0.8;
+	opacity: 1;
 	width: 100%;
 	height: $headerHeight;
 
@@ -21,9 +23,14 @@
 		height: $headerHeightMobile;
 	}
 
+	&__links {
+		// background-color: green;
+		display: flex;
+		justify-content: end;
+	}
+
 	a {
 		text-decoration: underline;
-
 		@include customize(theme) {
 			color: getValue(textDark);
 		}
@@ -39,10 +46,19 @@
 
 	&__links_container {
 		// background-color: red;
+		width: 100%;
 		height: $headerHeight;
 		display: flex;
 		flex-direction: row;
+		justify-content: flex-end;
 		align-items: center;
+	}
+
+	&__links_item {
+		padding-right: $gutter;
+		label {
+			margin: 0;
+		}
 	}
 
 
@@ -91,11 +107,11 @@
   }
   
   input:checked + .slider {
-	background-color: #2196F3;
+	background-color: black;
   }
   
   input:focus + .slider {
-	box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px black;
   }
   
   input:checked + .slider:before {
