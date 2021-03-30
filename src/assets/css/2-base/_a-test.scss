@@ -29,34 +29,45 @@
       &__part1 {
           position: absolute;
           height: 500px;
-          width: 10px;
-          left: 50%;
+          width: 7px;
+          left: 1%;
           top: 20%;
           @include customize(theme) {
             background-color: getValue(backgroundDark);
           }
-          transform: rotate(12deg);
+          transform: rotate(18deg);
           transform-origin: bottom;
       }
       &__part2 {
           position: absolute;
           height: 500px;
-          width: 10px;
-          left: 60%;
+          width: 7px;
+          left: 99%;
           top: 20%;
           @include customize(theme) {
             background-color: getValue(backgroundDark);
           }
-          transform: rotate(-12deg);
+          transform: rotate(-18deg);
           transform-origin: bottom;
       }
 
       &__part3 {
         position: absolute;
-        height: 10px;
-        width: 300px;
-        left: 47%;
-        top: 60%;
+        height: 7px;
+        width: 250px;
+        left: 35%;
+        top: 70%;
+        @include customize(theme) {
+          background-color: getValue(backgroundDark);
+        }
+    }
+
+      &__part4 {
+        position: absolute;
+        height: 7px;
+        width: 250px;
+        left: 15%;
+        top: 46%;
         @include customize(theme) {
           background-color: getValue(backgroundDark);
         }

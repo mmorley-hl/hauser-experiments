@@ -1,5 +1,4 @@
 const a_part1 = document.querySelectorAll(".a-test-solo__part1");
-console.log('a_part1', a_part1)
 const a_part2 = document.querySelectorAll(".a-test-solo__part2");
 const a_part3 = document.querySelectorAll(".a-test-solo__part3");
 

@@ -19,6 +19,7 @@
           transform: rotate(12deg);
           transform-origin: bottom;
       }
+
       &__part2 {
           position: absolute;
           height: 500px;
@@ -36,8 +37,8 @@
       &__part3 {
         position: absolute;
         height: 10px;
-        width: 300px;
-        left: 47%;
+        width: 250px;
+        left: 49%;
         top: 60%;
         @include customize(theme) {
           background-color: getValue(backgroundDark);
