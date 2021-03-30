@@ -4758,10 +4758,10 @@ html {
 .a-test-solo__part1 {
   position: absolute;
   height: 500px;
-  width: 10px;
+  width: 7px;
   left: 50%;
   top: 20%;
-  transform: rotate(12deg);
+  transform: rotate(18deg);
   transform-origin: bottom;
 }
 .theme-light .a-test-solo__part1 {
@@ -4773,10 +4773,10 @@ html {
 .a-test-solo__part2 {
   position: absolute;
   height: 500px;
-  width: 10px;
+  width: 7px;
   left: 60%;
   top: 20%;
-  transform: rotate(-12deg);
+  transform: rotate(-18deg);
   transform: tra;
   transform-origin: bottom;
 }
@@ -4788,7 +4788,7 @@ html {
 }
 .a-test-solo__part3 {
   position: absolute;
-  height: 10px;
+  height: 7px;
   width: 250px;
   left: 49%;
   top: 60%;
@@ -4797,6 +4797,87 @@ html {
   background-color: #000;
 }
 .theme-dark .a-test-solo__part3 {
+  background-color: #fff;
+}
+
+.h-test-wrapper {
+  overflow: hidden;
+}
+.theme-light .h-test-wrapper {
+  background-color: #fff;
+  color: #000;
+}
+.theme-dark .h-test-wrapper {
+  background-color: #000;
+  color: #fff;
+}
+.h-test-wrapper .row {
+  overflow: visible;
+}
+.h-test-wrapper .column {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.h-test {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.h-test__part1 {
+  position: absolute;
+  height: 500px;
+  width: 7px;
+  left: 1%;
+  top: 20%;
+  transform-origin: bottom;
+}
+.theme-light .h-test__part1 {
+  background-color: #000;
+}
+.theme-dark .h-test__part1 {
+  background-color: #fff;
+}
+.h-test__part2 {
+  position: absolute;
+  height: 500px;
+  width: 7px;
+  left: 99%;
+  top: 20%;
+  transform-origin: bottom;
+}
+.theme-light .h-test__part2 {
+  background-color: #000;
+}
+.theme-dark .h-test__part2 {
+  background-color: #fff;
+}
+.h-test__part3 {
+  position: absolute;
+  height: 7px;
+  width: 250px;
+  left: -100%;
+  top: 70%;
+}
+.theme-light .h-test__part3 {
+  background-color: #000;
+}
+.theme-dark .h-test__part3 {
+  background-color: #fff;
+}
+.h-test__part4 {
+  display: none;
+  position: absolute;
+  height: 7px;
+  width: 250px;
+  left: 15%;
+  top: 46%;
+}
+.theme-light .h-test__part4 {
+  background-color: #000;
+}
+.theme-dark .h-test__part4 {
   background-color: #fff;
 }
 
