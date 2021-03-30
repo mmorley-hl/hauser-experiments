@@ -16,10 +16,10 @@ document.addEventListener("mousemove", (e) => {
         elem.style.transform = `rotate(${x - 18}deg)`;
      })
      a_part3.forEach((elem) => {
-        elem.style.transform = `translateX(${x - 15}px)`;
+        elem.style.transform = `translate(${x - 15}px, ${y}px)`;
      })
      a_part4.forEach((elem) => {
-        elem.style.transform = `translateX(${x + 15}px)`;
+        elem.style.transform = `translate(${x + 15}px, ${-y}px)`;
      })
      
 })
