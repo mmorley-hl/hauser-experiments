@@ -5401,9 +5401,11 @@ input:checked + .slider:before {
 }
 
 .theme-light footer {
+  background-color: #000;
   color: #fff;
 }
 .theme-dark footer {
+  background-color: #fff;
   color: #000;
 }
 

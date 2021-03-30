@@ -1,5 +1,6 @@
 footer {
 	@include customize(theme) {
+		background-color: getValue(backgroundDark) ;
         color: getValue(backgroundLight);
       }
 }

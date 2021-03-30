@@ -19,7 +19,7 @@ document.addEventListener("mousemove", (e) => {
         elem.style.transform = `translate(${x - 15}px, ${y}px)`;
      })
      a_part4.forEach((elem) => {
-        elem.style.transform = `translate(${x + 15}px, ${-y}px)`;
+        elem.style.transform = `translate(${x + 15}px, ${-y * 0.5}px)`;
      })
      
 })
