@@ -4688,7 +4688,7 @@ html {
 .a-test__part1 {
   position: absolute;
   height: 500px;
-  width: 20px;
+  width: 10px;
   left: 50%;
   top: 20%;
   transform: rotate(12deg);
@@ -4703,7 +4703,7 @@ html {
 .a-test__part2 {
   position: absolute;
   height: 500px;
-  width: 20px;
+  width: 10px;
   left: 60%;
   top: 20%;
   transform: rotate(-12deg);
@@ -4717,7 +4717,7 @@ html {
 }
 .a-test__part3 {
   position: absolute;
-  height: 20px;
+  height: 10px;
   width: 300px;
   left: 47%;
   top: 60%;
@@ -4745,7 +4745,7 @@ html {
 .a-test-solo__part1 {
   position: absolute;
   height: 500px;
-  width: 20px;
+  width: 10px;
   left: 50%;
   top: 20%;
   transform: rotate(12deg);
@@ -4760,7 +4760,7 @@ html {
 .a-test-solo__part2 {
   position: absolute;
   height: 500px;
-  width: 20px;
+  width: 10px;
   left: 60%;
   top: 20%;
   transform: rotate(-12deg);
@@ -4775,7 +4775,7 @@ html {
 }
 .a-test-solo__part3 {
   position: absolute;
-  height: 20px;
+  height: 10px;
   width: 300px;
   left: 47%;
   top: 60%;
