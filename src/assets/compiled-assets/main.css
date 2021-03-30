@@ -4800,6 +4800,10 @@ html {
   background-color: #fff;
 }
 
+.transition {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+}
+
 .h-test-wrapper {
   overflow: hidden;
 }
@@ -4829,7 +4833,7 @@ html {
   position: absolute;
   height: 500px;
   width: 7px;
-  left: 1%;
+  left: 10%;
   top: 20%;
   transform-origin: bottom;
 }
@@ -4843,7 +4847,7 @@ html {
   position: absolute;
   height: 500px;
   width: 7px;
-  left: 99%;
+  left: 50%;
   top: 20%;
   transform-origin: bottom;
 }

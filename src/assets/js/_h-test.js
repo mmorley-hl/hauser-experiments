@@ -10,12 +10,15 @@ document.addEventListener("mousemove", (e) => {
 
 
      h_part1.forEach((elem) => {
+         
         elem.style.transform = `rotate(${x}deg)`;
      })
      h_part2.forEach((elem) => {
+      
         elem.style.transform = `rotate(${x}deg)`;
      })
      h_part3.forEach((elem) => {
+      
         elem.style.transform = `translate(${x_3}px,${y}px)`;
       //   elem.style.transform = `translateY(${y}px)`;
      })
