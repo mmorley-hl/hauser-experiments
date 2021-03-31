@@ -1,0 +1,115 @@
+.a-test-spacing-wrapper {
+    overflow: hidden;
+    height: 270vh;
+    position: relative;
+      @include customize(theme) {
+        background-color: getValue(backgroundLight);
+        color: getValue(backgroundDark);
+      }
+    .row {
+
+        // margin: 0;
+        // padding: 0;
+        overflow: visible;
+    }
+    .column {
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+    }
+}
+
+.a-test-spacing {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    // @include customize(theme) {
+    //     background-color: getValue(backgroundLight);
+    //     color: getValue(backgroundDark);
+    //   }
+    &__value {
+      
+    }
+
+    &__001 {
+      // background-color: red;
+      // position: absolute;
+      // position: fixed;
+      // transform: translate(0px,10px);
+    }
+
+    &__002 {
+      // padding-top: 100vh;
+      // display: none;
+      // background-color: blue;
+      // position: absolute;
+    }
+
+    &__003 {
+      // display: none;
+      // background-color: green;
+      padding-left: 200px;
+      // position: absolute;
+    }
+
+    &__004 {
+      // display: none;
+      padding-left: 100px;
+      // background-color: yellow;
+      // position: absolute;
+    }
+
+    &__005 {
+      // display: none;
+      padding-left:150px;
+      // background-color: purple;
+      // position: absolute;
+    }
+
+      &__part1 {
+          position: absolute;
+          height: 500px;
+          width: 7px;
+          left: 1%;
+          top: 20%;
+          @include customize(theme) {
+            background-color: getValue(backgroundDark);
+          }
+          transform: rotate(18deg);
+          transform-origin: bottom;
+      }
+      &__part2 {
+          position: absolute;
+          height: 500px;
+          width: 7px;
+          left: 99%;
+          top: 20%;
+          @include customize(theme) {
+            background-color: getValue(backgroundDark);
+          }
+          transform: rotate(-18deg);
+          transform-origin: bottom;
+      }
+
+      &__part3 {
+        position: absolute;
+        height: 7px;
+        width: 250px;
+        left: 35%;
+        top: 70%;
+        @include customize(theme) {
+          background-color: getValue(backgroundDark);
+        }
+    }
+
+      &__part4 {
+        position: absolute;
+        height: 7px;
+        width: 250px;
+        left: 15%;
+        top: 46%;
+        @include customize(theme) {
+          background-color: getValue(backgroundDark);
+        }
+    }
+}

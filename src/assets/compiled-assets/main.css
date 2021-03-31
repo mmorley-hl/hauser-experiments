@@ -5000,6 +5000,99 @@ html {
   background-color: #fff;
 }
 
+.a-test-spacing-wrapper {
+  overflow: hidden;
+  height: 270vh;
+  position: relative;
+}
+.theme-light .a-test-spacing-wrapper {
+  background-color: #fff;
+  color: #000;
+}
+.theme-dark .a-test-spacing-wrapper {
+  background-color: #000;
+  color: #fff;
+}
+.a-test-spacing-wrapper .row {
+  overflow: visible;
+}
+.a-test-spacing-wrapper .column {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.a-test-spacing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.a-test-spacing__003 {
+  padding-left: 200px;
+}
+.a-test-spacing__004 {
+  padding-left: 100px;
+}
+.a-test-spacing__005 {
+  padding-left: 150px;
+}
+.a-test-spacing__part1 {
+  position: absolute;
+  height: 500px;
+  width: 7px;
+  left: 1%;
+  top: 20%;
+  transform: rotate(18deg);
+  transform-origin: bottom;
+}
+.theme-light .a-test-spacing__part1 {
+  background-color: #000;
+}
+.theme-dark .a-test-spacing__part1 {
+  background-color: #fff;
+}
+.a-test-spacing__part2 {
+  position: absolute;
+  height: 500px;
+  width: 7px;
+  left: 99%;
+  top: 20%;
+  transform: rotate(-18deg);
+  transform-origin: bottom;
+}
+.theme-light .a-test-spacing__part2 {
+  background-color: #000;
+}
+.theme-dark .a-test-spacing__part2 {
+  background-color: #fff;
+}
+.a-test-spacing__part3 {
+  position: absolute;
+  height: 7px;
+  width: 250px;
+  left: 35%;
+  top: 70%;
+}
+.theme-light .a-test-spacing__part3 {
+  background-color: #000;
+}
+.theme-dark .a-test-spacing__part3 {
+  background-color: #fff;
+}
+.a-test-spacing__part4 {
+  position: absolute;
+  height: 7px;
+  width: 250px;
+  left: 15%;
+  top: 46%;
+}
+.theme-light .a-test-spacing__part4 {
+  background-color: #000;
+}
+.theme-dark .a-test-spacing__part4 {
+  background-color: #fff;
+}
+
 .first-letter {
   float: left;
   font-size: 50px;
