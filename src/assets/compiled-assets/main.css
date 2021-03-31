@@ -4749,6 +4749,7 @@ html {
   width: 100vw;
   left: 10%;
   right: 10%;
+  margin-top: -5vh;
 }
 
 .paralax_002 {
@@ -4775,7 +4776,7 @@ html {
 
 .a-test-paralax-wrapper {
   overflow: hidden;
-  height: 175vh;
+  height: 168vh;
   position: relative;
 }
 .theme-light .a-test-paralax-wrapper {

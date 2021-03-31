@@ -10,6 +10,7 @@
     width: 100vw;
     left: 10%;
     right: 10%;
+    margin-top: -5vh;
 
 }
 .paralax_002 {
@@ -37,7 +38,7 @@
 
 .a-test-paralax-wrapper {
     overflow: hidden;
-    height: 175vh;
+    height: 168vh;
     position: relative;
       @include customize(theme) {
         background-color: getValue(backgroundLight);
