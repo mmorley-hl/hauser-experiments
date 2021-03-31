@@ -1,9 +1,12 @@
 import LocomotiveScroll from 'locomotive-scroll';
+if(document.querySelector('[data-scroll-container]')){
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
+   const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+  });
+}
+
 
 const a_part1 = document.querySelectorAll(".a-test-paralax__part1");
 const a_part2 = document.querySelectorAll(".a-test-paralax__part2");
