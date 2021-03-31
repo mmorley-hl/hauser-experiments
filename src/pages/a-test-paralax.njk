@@ -1,0 +1,47 @@
+---
+title: hauser-experiments
+metaDescription: This is a sample meta description. If one is not present in
+  your page/post's front matter, the default metadata.desciption will be used
+  instead.
+date: 2017-01-01T00:00:00.000Z
+permalink: /a-paralax.html
+description: hauser-experiments
+eleventyNavigation:
+  key: a-paralax
+  order: 1
+---
+<!-- <section class="section paratest" data-scroll-container>
+  <div>
+    <div data-scroll-section>
+        <h1 data-scroll>Hey</h1>
+        <p data-scroll>👋</p>
+    </div>
+    <div data-scroll-section>
+        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+        <p data-scroll data-scroll-speed="2">😬</p>
+    </div>
+  </div>
+</section> -->
+
+
+<div class="section background-secondary a-test-paralax-wrapper" data-scroll-container>
+  <section class="section">
+    <div class="row paralax_001" data-scroll data-scroll-speed="-15" data-scroll-delay>
+      {% include "a-column-componente.njk" %}
+    </div>
+    <div class="row paralax_002" data-scroll data-scroll-speed="13">
+      {% include "a-column-componente.njk" %}
+    </div>
+    <div class="row paralax_003" data-scroll data-scroll-speed="15">
+      {% include "a-column-componente.njk" %}
+    </div>
+    <div class="row paralax_004" data-scroll data-scroll-speed="50">
+      {% include "a-column-componente.njk" %}
+    </div>
+    <div class="row paralax_005" data-scroll data-scroll-speed="14">
+      {% include "a-column-componente.njk" %}
+    </div>
+  </section>
+ 
+</div> 
+

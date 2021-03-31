@@ -4662,6 +4662,8 @@ html {
 
 .a-test-wrapper {
   overflow: hidden;
+  height: 500vh;
+  position: relative;
 }
 .theme-light .a-test-wrapper {
   background-color: #fff;
@@ -4739,6 +4741,90 @@ html {
   background-color: #000;
 }
 .theme-dark .a-test__part4 {
+  background-color: #fff;
+}
+
+.a-test-paralax-wrapper {
+  overflow: hidden;
+  height: 500vh;
+  position: relative;
+}
+.theme-light .a-test-paralax-wrapper {
+  background-color: #fff;
+  color: #000;
+}
+.theme-dark .a-test-paralax-wrapper {
+  background-color: #000;
+  color: #fff;
+}
+.a-test-paralax-wrapper .row {
+  overflow: visible;
+}
+.a-test-paralax-wrapper .column {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.a-test-paralax {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.a-test-paralax__part1 {
+  position: absolute;
+  height: 500px;
+  width: 7px;
+  left: 1%;
+  top: 20%;
+  transform: rotate(18deg);
+  transform-origin: bottom;
+}
+.theme-light .a-test-paralax__part1 {
+  background-color: #000;
+}
+.theme-dark .a-test-paralax__part1 {
+  background-color: #fff;
+}
+.a-test-paralax__part2 {
+  position: absolute;
+  height: 500px;
+  width: 7px;
+  left: 99%;
+  top: 20%;
+  transform: rotate(-18deg);
+  transform-origin: bottom;
+}
+.theme-light .a-test-paralax__part2 {
+  background-color: #000;
+}
+.theme-dark .a-test-paralax__part2 {
+  background-color: #fff;
+}
+.a-test-paralax__part3 {
+  position: absolute;
+  height: 7px;
+  width: 250px;
+  left: 35%;
+  top: 70%;
+}
+.theme-light .a-test-paralax__part3 {
+  background-color: #000;
+}
+.theme-dark .a-test-paralax__part3 {
+  background-color: #fff;
+}
+.a-test-paralax__part4 {
+  position: absolute;
+  height: 7px;
+  width: 250px;
+  left: 15%;
+  top: 46%;
+}
+.theme-light .a-test-paralax__part4 {
+  background-color: #000;
+}
+.theme-dark .a-test-paralax__part4 {
   background-color: #fff;
 }
 
@@ -4893,6 +4979,93 @@ html {
   text-align: center;
   padding: 10px 0;
   font-weight: 600;
+}
+
+/*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 .hero_blockqoute {

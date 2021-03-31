@@ -16,3 +16,4 @@ import './_dots.js';
 import './_a-test.js';
 import './_a-test-solo.js';
 import './_h-test.js';
+import './_a-test-paralax.js';

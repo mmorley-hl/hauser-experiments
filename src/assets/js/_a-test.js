@@ -1,5 +1,9 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const a_part1 = document.querySelectorAll(".a-test__part1");
-console.log('a_part1', a_part1)
 const a_part2 = document.querySelectorAll(".a-test__part2");
 const a_part3 = document.querySelectorAll(".a-test__part3");
 const a_part4 = document.querySelectorAll(".a-test__part4");
