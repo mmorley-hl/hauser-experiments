@@ -19,7 +19,7 @@ window.onscroll = (e) => {
 		a_test_spacing_value.forEach((elem) => {
 			console.log('window.pageYOffset', window.pageYOffset)
 			// elem.style.transform = `translate(0px, -${window.pageYOffset}px)`;
-			elem.style.margin = `-${window.pageYOffset/3}px 0px 0px 0px`;
+			elem.style.margin = `-${window.pageYOffset}px 0px 0px 0px`;
 		})
 	}
 	// console.log(window.pageYOffset)
