@@ -4758,24 +4758,24 @@ html {
 
 .paralax_003 {
   position: absolute;
-  margin-top: 20vh;
+  margin-top: -60vh;
   margin-left: 300px;
 }
 
 .paralax_004 {
   position: absolute;
-  margin-top: 30vh;
+  margin-top: -40vh;
 }
 
 .paralax_005 {
   position: absolute;
   margin-left: 100px;
-  margin-top: -20vh;
+  margin-top: 30vh;
 }
 
 .a-test-paralax-wrapper {
   overflow: hidden;
-  height: 245vh;
+  height: 175vh;
   position: relative;
 }
 .theme-light .a-test-paralax-wrapper {
