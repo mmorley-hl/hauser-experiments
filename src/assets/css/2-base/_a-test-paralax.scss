@@ -25,7 +25,7 @@
 }
 .paralax_004 {
   position: absolute;
-  margin-top: 60vh;
+  margin-top: 30vh;
     // background-color: yellow;
 }
 .paralax_005 {
@@ -37,7 +37,7 @@
 
 .a-test-paralax-wrapper {
     overflow: hidden;
-    height: 700vh;
+    height: 245vh;
     position: relative;
       @include customize(theme) {
         background-color: getValue(backgroundLight);

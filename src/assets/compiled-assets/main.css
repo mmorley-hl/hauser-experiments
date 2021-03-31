@@ -4764,7 +4764,7 @@ html {
 
 .paralax_004 {
   position: absolute;
-  margin-top: 60vh;
+  margin-top: 30vh;
 }
 
 .paralax_005 {
@@ -4775,7 +4775,7 @@ html {
 
 .a-test-paralax-wrapper {
   overflow: hidden;
-  height: 700vh;
+  height: 245vh;
   position: relative;
 }
 .theme-light .a-test-paralax-wrapper {
