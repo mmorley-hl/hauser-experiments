@@ -34,7 +34,7 @@
 
 .a-test-paralax-wrapper {
     overflow: hidden;
-    height: 500vh;
+    height: 700vh;
     position: relative;
       @include customize(theme) {
         background-color: getValue(backgroundLight);
@@ -54,7 +54,7 @@
 }
 
 .a-test-paralax {
-    height: 100vh;
+    height: 500px;
     width: 100%;
     position: relative;
     // @include customize(theme) {

@@ -4746,7 +4746,7 @@ html {
 
 .a-test-paralax-wrapper {
   overflow: hidden;
-  height: 500vh;
+  height: 700vh;
   position: relative;
 }
 .theme-light .a-test-paralax-wrapper {
@@ -4767,7 +4767,7 @@ html {
 }
 
 .a-test-paralax {
-  height: 100vh;
+  height: 500px;
   width: 100%;
   position: relative;
 }
