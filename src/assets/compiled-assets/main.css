@@ -4744,6 +4744,35 @@ html {
   background-color: #fff;
 }
 
+.paralax_001 {
+  z-index: 400;
+  width: 100vw;
+  left: 10%;
+  right: 10%;
+}
+
+.paralax_002 {
+  position: absolute;
+  margin-top: -60vh;
+}
+
+.paralax_003 {
+  position: absolute;
+  margin-top: 20vh;
+  margin-left: 300px;
+}
+
+.paralax_004 {
+  position: absolute;
+  margin-top: 60vh;
+}
+
+.paralax_005 {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -20vh;
+}
+
 .a-test-paralax-wrapper {
   overflow: hidden;
   height: 700vh;
@@ -4767,7 +4796,7 @@ html {
 }
 
 .a-test-paralax {
-  height: 500px;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
