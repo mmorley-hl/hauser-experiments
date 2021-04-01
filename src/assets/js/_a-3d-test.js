@@ -69,7 +69,7 @@ a3dtest.forEach(() => {
       // texture
    
       const textureLoader = new THREE.TextureLoader( manager );
-      const texture = textureLoader.load( '/assets/images/photography/black/Black_001.jpg' );
+      const texture = textureLoader.load( '../assets/images/photography/black/Black_001.jpg' );
    
       // model
    
@@ -87,7 +87,7 @@ a3dtest.forEach(() => {
       function onError() {}
    
       const loader = new OBJLoader( manager );
-      loader.load( '/assets/images/3d/A_011.obj', function ( obj ) {
+      loader.load( '../assets/images/3d/A_011.obj', function ( obj ) {
    
          object = obj;
    
