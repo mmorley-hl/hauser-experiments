@@ -10,6 +10,11 @@ a3dtest.forEach(() => {
 
 
    let container;
+   var cube = null
+   var timeline = null
+   var percentage = 0
+   var divContainer = document.querySelector('.a3dtest')
+   var maxHeight = (divContainer.clientHeight || divContainer.offsetHeight) - window.innerHeight
 
    let camera, scene, renderer;
    
@@ -23,6 +28,12 @@ a3dtest.forEach(() => {
    init();
    animate();
    
+   function addCube () {
+      cube = new THREE.Mesh( new THREE.BoxGeometry( 5, 250, 5 ), new THREE.MeshNormalMaterial() );
+      cube.position.y = 5
+      cube.position.z = -100
+      scene.add(cube);
+  }
    
    function init() {
    
@@ -105,9 +116,47 @@ a3dtest.forEach(() => {
       //
    
       window.addEventListener( 'resize', onWindowResize );
+      addCube()
+      initTimeline()
    
    }
    
+   function initTimeline() {
+      timeline = anime.timeline({
+        autoplay: false,
+        duration: 4500,
+        easing: 'easeOutSine'
+      });
+      timeline.add({
+        targets: cube.position,
+        x: 100,
+        y: 25,
+        z: -50,
+        duration: 2250,
+        update: camera.updateProjectionMatrix()
+      })
+      timeline.add({
+        targets: cube.position,
+        x: 0,
+        y: 0,
+        z: 50,
+        duration: 2250,
+        update: camera.updateProjectionMatrix()
+      })
+      var value = new THREE.Color(0xFFFCFC)
+      var initial = new THREE.Color(0x161216)
+      timeline.add({
+        targets: initial,
+        r: [initial.r, value.r],
+        g: [initial.g, value.g],
+        b: [initial.b, value.b],
+        duration: 4500,
+        update: () => {
+          renderer.setClearColor(initial);
+        }
+      }, 0);
+    }
+
    function onWindowResize() {
    
       windowHalfX = window.innerWidth / 2;
@@ -142,9 +191,19 @@ a3dtest.forEach(() => {
       camera.position.y += ( - mouseY - camera.position.y ) * .05;
    
       camera.lookAt( scene.position );
-   
+      percentage = lerp(percentage, scrollY, .08);
+      timeline.seek(percentage * (4500 / maxHeight))
+      // animate the cube
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.0125;
+      cube.rotation.z += 0.012;
       renderer.render( scene, camera );
    
    }
+   // linear interpolation function
+function lerp(a, b, t) {
+   return ((1 - t) * a + t * b);
+ }
 })
+
 
