@@ -23,7 +23,10 @@ a3dtest.forEach(() => {
    let windowHalfX = window.innerWidth / 2;
    let windowHalfY = window.innerHeight / 2;
    
-   let object;
+   var object;
+   let model;
+   var car;
+   var object_return;
    
    init();
    animate();
@@ -34,42 +37,26 @@ a3dtest.forEach(() => {
       cube.position.z = -100
       scene.add(cube);
   }
+
+  function addModel () {
+        // manager
    
-   function init() {
+       function loadModel() {
    
-      container = document.createElement( 'div' );
-      document.body.appendChild( container );
-   
-      camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-      camera.position.z = 250;
-   
-      // scene
-   
-      scene = new THREE.Scene();
-   
-      const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
-      scene.add( ambientLight );
-   
-      const pointLight = new THREE.PointLight( 0xffffff, 0.8 );
-      camera.add( pointLight );
-      scene.add( camera );
-   
-      // manager
-   
-      function loadModel() {
-   
-         object.traverse( function ( child ) {
+          object.traverse( function ( child ) {
    
             if ( child.isMesh ) child.material.map = texture;
    
          } );
    
-         object.position.y = - 95;
-         scene.add( object );
-   
+         object.position.y = - 195;
+         model = object;
+         // scene.add(model);
       }
    
       const manager = new THREE.LoadingManager( loadModel );
+      console.log("manager", manager)
+      
    
       manager.onProgress = function ( item, loaded, total ) {
    
@@ -101,11 +88,57 @@ a3dtest.forEach(() => {
       loader.load( './assets/images/3d/A_011.obj', function ( obj ) {
    
          object = obj;
-   
+         model = object;
+         console.log("model_test", model)
+         console.log("obj_test", obj)
       }, onProgress, onError );
+      
+  }
+   
+   function init() {
+
+ 
+   
+      container = document.createElement( 'div' );
+      document.body.appendChild( container );
+   
+      camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+      camera.position.z = 250;
+   
+      // scene
+   
+      scene = new THREE.Scene();
+   
+      const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
+      scene.add( ambientLight );
+   
+      const pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+      camera.add( pointLight );
+      scene.add( camera );
+   
+      var loader = new OBJLoader();
+
+      // return a mesh from an obj file   
+      function createObject( objFile, objName ) {
+          var container = new THREE.Object3D();
+          loader.load( objFile , function ( object ) {
+              object.name = objName;
+            //   container.add( object );
+            //   scene.add(object);
+            object.position.y = 5
+            object.position.z = -100
+            scene.add(object);
+          })
+          return container;
+      }
+      
+      car = createObject('./assets/images/3d/A_011.obj', 'abc123');
+      // car.position.y = 10;
+      console.log("car", car)
+
    
       //
-   
+      
       renderer = new THREE.WebGLRenderer();
       renderer.setPixelRatio( window.devicePixelRatio );
       renderer.setSize( window.innerWidth, window.innerHeight );
@@ -116,19 +149,23 @@ a3dtest.forEach(() => {
       //
    
       window.addEventListener( 'resize', onWindowResize );
-      addCube()
+      addModel()
+      // addCube()
       initTimeline()
-   
+      console.log("car_inti", car)
+      console.log("cube", cube)
+      console.log("model", model)
    }
    
    function initTimeline() {
+      console.log("car_timeline", car)
       timeline = anime.timeline({
         autoplay: false,
         duration: 4500,
         easing: 'easeOutSine'
       });
       timeline.add({
-        targets: cube.position,
+        targets: car.position,
         x: 100,
         y: 25,
         z: -50,
@@ -136,7 +173,7 @@ a3dtest.forEach(() => {
         update: camera.updateProjectionMatrix()
       })
       timeline.add({
-        targets: cube.position,
+        targets: car.position,
         x: 0,
         y: 0,
         z: 50,
@@ -157,6 +194,7 @@ a3dtest.forEach(() => {
       }, 0);
     }
 
+    // window resize 
    function onWindowResize() {
    
       windowHalfX = window.innerWidth / 2;
@@ -169,14 +207,13 @@ a3dtest.forEach(() => {
    
    }
    
+   // Mouse move change kamera psoition
    function onDocumentMouseMove( event ) {
    
       mouseX = ( event.clientX - windowHalfX );
       mouseY = ( event.clientY - windowHalfY );
    
    }
-   
-   //
    
    function animate() {
    
@@ -194,16 +231,17 @@ a3dtest.forEach(() => {
       percentage = lerp(percentage, scrollY, .08);
       timeline.seek(percentage * (4500 / maxHeight))
       // animate the cube
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.0125;
-      cube.rotation.z += 0.012;
+      car.rotation.x += 0.01;
+      car.rotation.y += 0.0125;
+      car.rotation.z += 0.012;
       renderer.render( scene, camera );
    
    }
+
    // linear interpolation function
-function lerp(a, b, t) {
-   return ((1 - t) * a + t * b);
- }
+   function lerp(a, b, t) {
+      return ((1 - t) * a + t * b);
+   }
 })
 
 
